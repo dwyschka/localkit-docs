@@ -79,3 +79,16 @@ Supported:
 - [x] Energy consumption tracking
 
 [Full documentation →](./devices/eversweet-solo)
+
+---
+
+## Petkit K3 — Odor Spray (BLE, Read-only)
+
+Bluetooth odor spray that pairs with the Pura Max litter box. Triggered automatically after each cleaning cycle. Read-only — controlled via the linked Pura Max.
+
+Supported:
+- [x] Liquid level monitoring
+- [x] Battery level monitoring
+- [x] Link status (paired Pura Max)
+
+[Full documentation →](./devices/k3)

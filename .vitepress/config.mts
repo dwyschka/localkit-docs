@@ -22,6 +22,7 @@ export default defineConfig({
           { text: 'Petkit Fresh Element Solo', link: '/devices/fresh-element-solo' },
           { text: 'Petkit Yumshare Solo', link: '/devices/yumshare-solo' },
           { text: 'Petkit W5 (Water Fountain)', link: '/devices/eversweet-solo' },
+          { text: 'Petkit K3 (Odor Spray)', link: '/devices/k3' },
         ]
       }
     ],
