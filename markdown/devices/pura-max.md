@@ -85,4 +85,6 @@ These appear as **Number** entities in Home Assistant under the `config` categor
 
 ## K3 Integration
 
-The Pura Max can be paired with a Petkit K3 Bluetooth odor spray device. Once paired, the K3 is triggered automatically after each cleaning cycle. Use the **Lightning Start** and **Lightning Stop** buttons to control the K3 manually, or use **Link with K3** / **Unlink from K3** actions to manage the pairing.
+The Pura Max can be paired with a [Petkit K3](./k3) Bluetooth odor spray device. Once paired, the K3 is triggered automatically after each cleaning cycle. Use the **Lightning Start** and **Lightning Stop** buttons to control the K3 manually, or use **Link with K3** / **Unlink from K3** actions to manage the pairing.
+
+→ [K3 Odor Spray documentation](./k3)
