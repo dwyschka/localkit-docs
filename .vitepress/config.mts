@@ -15,10 +15,13 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Devices',
         items: [
           { text: 'Supported Devices', link: '/supported-devices' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Petkit Pura Max', link: '/devices/pura-max' },
+          { text: 'Petkit Fresh Element Solo', link: '/devices/fresh-element-solo' },
+          { text: 'Petkit Yumshare Solo', link: '/devices/yumshare-solo' },
+          { text: 'Petkit W5 (Water Fountain)', link: '/devices/eversweet-solo' },
         ]
       }
     ],
