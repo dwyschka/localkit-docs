@@ -19,7 +19,7 @@ export default defineConfig({
           { text: 'Requirements', link: '/overview/requirements' },
           { text: 'Installation', link: '/overview/installation' },
           { text: 'DNS', link: '/overview/dns' },
-          { text: 'Screenshot', link: '/overview/dns-screenshot' },
+          { text: 'Screenshot', link: '/overview/screenshot' },
           { text: 'Changelog', link: '/overview/changelog' },
         ]
       },

@@ -24,6 +24,3 @@ HOMEASSISTANT_AUTH_PASSWORD=PASSWORD
 If your Devices are not connected to Home Assistant, ensure the `localkit-homeassistant` service is enabled and running:
 
 ![img.png](../public/localkit-services.png)
-
-### Screenshot 
-![homeassistant.png](../public/homeassistant.png)
