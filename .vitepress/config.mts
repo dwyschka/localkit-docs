@@ -10,19 +10,48 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Supported Devices', link: '/supported-devices' }
     ],
 
     sidebar: [
       {
+        text: 'Localkit',
+        items: [
+          { text: 'Requirements', link: '/overview/requirements' },
+          { text: 'Installation', link: '/overview/installation' },
+          { text: 'DNS', link: '/overview/dns' },
+          { text: 'Screenshot', link: '/overview/dns-screenshot' },
+          { text: 'Changelog', link: '/overview/changelog' },
+        ]
+      },
+      {
+        text: 'Integrations',
+        items: [
+          { text: 'Home Assistant', link: '/overview/homeassistant' },
+        ]
+      },
+      {
         text: 'Devices',
         items: [
-          { text: 'Supported Devices', link: '/supported-devices' },
+          { text: 'Overview', link: '/supported-devices' },
           { text: 'Petkit Pura Max', link: '/devices/pura-max' },
           { text: 'Petkit Fresh Element Solo', link: '/devices/fresh-element-solo' },
           { text: 'Petkit Yumshare Solo', link: '/devices/yumshare-solo' },
-          { text: 'Petkit W5 (Water Fountain)', link: '/devices/eversweet-solo' },
-          { text: 'Petkit K3 (Odor Spray)', link: '/devices/k3' },
+        ]
+      },
+      {
+        text: 'Bluetooth Devices',
+        items: [
+          { text: 'Overview', link: '/bluetooth-devices/overview' },
+          { text: 'Petkit W5 (Water Fountain)', link: '/bluetooth-devices/w5' },
+          { text: 'Petkit K3 (Odor Spray)', link: '/bluetooth-devices/k3' },
+        ]
+      },
+      {
+        text: 'Links',
+        items: [
+          { text: 'Localkit', link: 'https://github.com/dwyschka/localkit' },
+          { text: 'Localkit Broker', link: 'https://github.com/dwyschka/localkit-broker' },
+          { text: 'Discord', link: 'https://discord.gg/pprJVBsESd' },
         ]
       }
     ],

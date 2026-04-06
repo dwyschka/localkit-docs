@@ -10,15 +10,16 @@ The Petkit Pura Max is an automatic self-cleaning litter box. Localkit exposes i
 
 ## Supported Features
 
-- [x] Auto cleaning cycle
-- [x] Manual cleaning control
-- [x] Maintenance mode
-- [x] K3 odor spray integration
-- [x] Litter monitoring (weight, fill level, usage count)
-- [x] N50 deodorizer filter tracking
-- [x] Do-not-disturb scheduling
-- [x] Kitten protection mode
-- [x] Error reporting
+- ✅ Auto cleaning cycle
+- ✅ Manual cleaning control
+- ✅ Maintenance mode
+- ✅ K3 odor spray integration
+- ✅ Litter monitoring (weight, fill level, usage count)
+- ✅ N50 deodorizer filter tracking
+- ✅ Do-not-disturb scheduling
+- ✅ Kitten protection mode
+- ✅ Error reporting
+- ✅ Bluetooth Proxy
 
 ## Actions (Buttons)
 
@@ -85,6 +86,6 @@ These appear as **Number** entities in Home Assistant under the `config` categor
 
 ## K3 Integration
 
-The Pura Max can be paired with a [Petkit K3](./k3) Bluetooth odor spray device. Once paired, the K3 is triggered automatically after each cleaning cycle. Use the **Lightning Start** and **Lightning Stop** buttons to control the K3 manually, or use **Link with K3** / **Unlink from K3** actions to manage the pairing.
+The Pura Max can be paired with a [Petkit K3](../bluetooth-devices/k3) Bluetooth odor spray device. Once paired, the K3 is triggered automatically after each cleaning cycle. Use the **Lightning Start** and **Lightning Stop** buttons to control the K3 manually, or use **Link with K3** / **Unlink from K3** actions to manage the pairing.
 
-→ [K3 Odor Spray documentation](./k3)
+→ [K3 Odor Spray documentation](../bluetooth-devices/k3)

@@ -10,13 +10,14 @@ The Petkit Fresh Element Solo is an automatic pet feeder. Localkit exposes its f
 
 ## Supported Features
 
-- [x] Manual feed trigger
-- [x] Feeding schedules
-- [x] Food level warning
-- [x] Desiccant tracking
-- [x] Indicator light control
-- [x] Child lock
-- [x] Feed sound prompt
+- ✅ Manual feed trigger
+- ✅ Feeding schedules
+- ✅ Food level warning
+- ✅ Desiccant tracking
+- ✅ Indicator light control
+- ✅ Child lock
+- ✅ Feed sound prompt
+- ✅ Bluetooth Proxy
 
 ## Actions (Buttons)
 

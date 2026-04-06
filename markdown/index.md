@@ -8,18 +8,16 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
+      text: Get Started
+      link: /overview/requirements
+    - theme: alt
       text: Supported Devices
       link: /supported-devices
-    - theme: alt
-      text: API Examples
-      link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Local Control
+    details: Communicate directly with your Petkit devices on your local network — no cloud, no external servers.
+  - title: Home Assistant Integration
+    details: Automatically discovered by Home Assistant via MQTT. All device states and controls appear as native entities.
 ---
 

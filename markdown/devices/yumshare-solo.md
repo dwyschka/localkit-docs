@@ -10,20 +10,21 @@ The Petkit Yumshare Solo is an automatic pet feeder with a built-in camera. In a
 
 ## Supported Features
 
-- [x] Manual feed trigger
-- [x] Feeding schedules
-- [x] Camera control (enable/disable)
-- [x] Live stream
-- [x] Snapshot capture
-- [x] Motion detection
-- [x] Pet visit detection
-- [x] Eating detection
-- [x] Night vision
-- [x] Microphone
-- [x] Food level warning
-- [x] Desiccant tracking
-- [x] Volume control
-- [x] Sensitivity tuning
+- ✅ Manual feed trigger
+- ✅ Feeding schedules
+- ✅ Camera control (enable/disable)
+- ✅ Live stream
+- ✅ Snapshot capture
+- ✅ Motion detection
+- ✅ Pet visit detection
+- ✅ Eating detection
+- ✅ Night vision
+- ✅ Microphone
+- ✅ Food level warning
+- ✅ Desiccant tracking
+- ✅ Volume control
+- ✅ Sensitivity tuning
+- ✅ Bluetooth Proxy
 
 ## Actions (Buttons)
 
