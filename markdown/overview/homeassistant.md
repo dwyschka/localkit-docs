@@ -15,9 +15,13 @@ Replace IP and Port with your MQTT-Server.
 
 If your MQTT-Broker requires authentication, add following variables too:
 ````
-HOMEASSISTANT_AUTH_USERNAME=USERNAME  
+HOMEASSISTANT_AUTH_USERNAME=USERNAME
 HOMEASSISTANT_AUTH_PASSWORD=PASSWORD
 ````
+
+::: warning Two users required
+When using MQTT authorization, two separate users are needed — one for **subscribing** (used by Localkit to receive messages) and one for **publishing** (used by Home Assistant to send commands). Using a single user for both may cause permission errors.
+:::
 
 
 ## Enable
