@@ -27,4 +27,4 @@ When using MQTT authorization, two separate users are needed — one for **subsc
 ## Enable
 If your Devices are not connected to Home Assistant, ensure the `localkit-homeassistant` service is enabled and running:
 
-![img.png](../public/localkit-services.png)
+![localkit-services.png](../../assets/localkit-services.png)

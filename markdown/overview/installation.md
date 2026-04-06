@@ -95,4 +95,3 @@ Then visit the Web UI — you should be logged in automatically.
 
 If everything is set up correctly, your devices will appear in the Web UI.
 
-![devices.png](../public/devices.png)

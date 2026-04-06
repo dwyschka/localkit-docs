@@ -9,10 +9,6 @@ Petkit BLE devices (K3, W5) do not connect to Wi-Fi directly. Instead, they broa
 
 The proxy device (e.g. a Pura Max) forwards the BLE data to Localkit over MQTT. Localkit then decodes the payload and publishes the device state as Home Assistant entities.
 
-```
-[K3 / W5]  --BLE-->  [Pura Max (proxy)]  --MQTT-->  [Localkit]  --MQTT-->  [Home Assistant]
-```
-
 ## Requirements
 
 - At least one [Petkit Pura Max](../devices/pura-max) configured in Localkit — this acts as the BLE proxy.
