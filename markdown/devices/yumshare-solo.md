@@ -26,6 +26,18 @@ The Petkit Yumshare Solo is an automatic pet feeder with a built-in camera. In a
 - ✅ Sensitivity tuning
 - ✅ Bluetooth Proxy
 
+## How to Access
+
+::: warning Physical access required
+The Yumshare Solo does **not** support OTA firmware updates. You need to open the device and connect via serial (FTDI adapter) to gain access. OTA flashing is currently not implemented for this device.
+:::
+
+To access the device:
+
+1. Open the device casing to expose the PCB.
+2. Connect an FTDI adapter to the serial pins.
+3. Use a terminal to establish a serial connection and gain shell access.
+
 ## Actions (Buttons)
 
 These appear as **Button** entities in Home Assistant.

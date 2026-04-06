@@ -4,9 +4,10 @@
 
 Localkit intercepts the device's cloud communication by redirecting two domains to the local containers via DNS.
 
-| Domain | Redirects To | Container |
-|---|---|---|
-| `api.eu-pet.com` | `10.10.46.105` | Localkit |
+| Domain                | Redirects To | Container |
+|-----------------------|---|---|
+| `api.eu-pet.com`      | `10.10.46.105` | Localkit |
+| `api-eu.petkt.com` | `10.10.46.105` | Localkit |
 | `*.iot-as-mqtt.eu-central-1.aliyuncs.com` | `10.10.46.101` | Localkit Broker |
 
 ::: info
@@ -17,7 +18,7 @@ The region `eu-central-1` may differ depending on your initial device region. Ad
 
 Every device in Localkit needs its own subdomain. Enter the desired subdomain in Localkit and add the corresponding DNS entry pointing to the Localkit Broker IP.
 
-![dns-subdomain.png](../public/dns-subdomain.png)
+![dns-subdomain.png](../../assets/dns.png)
 
 For example: `localkit.iot-as-mqtt.eu-central-1.aliyuncs.com` → `10.10.46.101`
 

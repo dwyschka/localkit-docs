@@ -84,6 +84,22 @@ These appear as **Number** entities in Home Assistant under the `config` categor
 |------|---------------|-------|------|---------|-------------|
 | N50 Durability | `n50Durability` | 0–90 | 1 | 30 | Expected lifespan of the N50 filter in days. Used to calculate the next change reminder. |
 
+## How to Flash Modified Firmware
+
+1. Open the device detail page in the Localkit Web UI.
+2. Enable **OTA** in the device settings.
+3. Reboot the device — Localkit will automatically serve the modified firmware and the device will install it.
+
+The firmware is loaded directly from Localkit, no manual file transfer is needed.
+
+::: warning Flash twice
+The ESP32 has a fallback partition. You need to repeat the OTA process twice to ensure the modified firmware is written to both partitions — otherwise the device may boot back into the original firmware after a reboot.
+:::
+
+::: info Reverting to stock firmware
+Reverting to the original stock firmware is currently not implemented.
+:::
+
 ## K3 Integration
 
 The Pura Max can be paired with a [Petkit K3](../bluetooth-devices/k3) Bluetooth odor spray device. Once paired, the K3 is triggered automatically after each cleaning cycle. Use the **Lightning Start** and **Lightning Stop** buttons to control the K3 manually, or use **Link with K3** / **Unlink from K3** actions to manage the pairing.
