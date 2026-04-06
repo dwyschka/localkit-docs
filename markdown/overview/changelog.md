@@ -18,7 +18,7 @@ Initial release of Localkit.
 ### Features
 
 - Full Home Assistant integration via MQTT for all supported devices
-- Bluetooth Proxy support.
+- Bluetooth Proxy support (Currently read-only).
 - Feeding schedules for feeder devices
 - Live stream and snapshot capture for the Yumshare Solo
 - Motion, pet visit, and eating detection for the Yumshare Solo
