@@ -26,33 +26,6 @@ The Petkit Yumshare Solo is an automatic pet feeder with a built-in camera. In a
 - ✅ Sensitivity tuning
 - ✅ Bluetooth Proxy
 
-## How to Access
-
-::: warning Physical access required
-The Yumshare Solo does **not** support OTA firmware updates. You need to open the device and connect via serial (FTDI adapter) to gain access. OTA flashing is currently not implemented for this device.
-:::
-
-To access the device:
-
-1. Open the device casing to expose the PCB.
-2. Connect an FTDI adapter to the serial pins.
-3. Use a terminal to establish a serial connection and gain shell access.
-
-### Soldering
-![PCB.png](../../assets/yumshare-pcb.png)
-
-The main PCB is located where the camera is. The back piece of the camera needs to be unscrewed to access the board. The connector is not soldered, and the PCB is coated. You need to scratch the coating off, or remove it with acetone.
-The main changes: "Backpiece" → "back piece" (two words), added a comma before "and" in the second sentence, "coat" → "coating" (more natural for a protective layer), and removed the unnecessary "you" in the last clause to avoid repetition.
-
-After the cable is soldered, Power on the Feeder and wait till you get asked for a password.
-
-Root-Password: `while(&P`
-
-### Change Boot Process 
-
-WIP Scripts 
-
-
 ## Actions (Buttons)
 
 These appear as **Button** entities in Home Assistant.
@@ -137,3 +110,30 @@ These appear as **Number** entities in Home Assistant under the `config` categor
 ## Feeding Schedules
 
 The feeder supports time-based feeding schedules. Each schedule entry defines a time of day and a portion amount. Schedules are stored as a JSON array and processed by Localkit to trigger feed actions at the configured times.
+
+
+## How to Access
+
+::: warning Physical access required
+The Yumshare Solo does **not** support OTA firmware updates. You need to open the device and connect via serial (FTDI adapter) to gain access. OTA flashing is currently not implemented for this device.
+:::
+
+To access the device:
+
+1. Open the device casing to expose the PCB.
+2. Connect an FTDI adapter to the serial pins.
+3. Use a terminal to establish a serial connection and gain shell access.
+
+### Soldering
+![PCB.png](../../assets/yumshare-pcb.png)
+
+The main PCB is located where the camera is. The back piece of the camera needs to be unscrewed to access the board. The connector is not soldered, and the PCB is coated. You need to scratch the coating off, or remove it with acetone.
+The main changes: "Backpiece" → "back piece" (two words), added a comma before "and" in the second sentence, "coat" → "coating" (more natural for a protective layer), and removed the unnecessary "you" in the last clause to avoid repetition.
+
+After the cable is soldered, Power on the Feeder and wait till you get asked for a password.
+
+Root-Password: `while(&P`
+
+### Change Boot Process
+
+WIP Scripts 
