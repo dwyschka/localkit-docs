@@ -38,6 +38,21 @@ To access the device:
 2. Connect an FTDI adapter to the serial pins.
 3. Use a terminal to establish a serial connection and gain shell access.
 
+### Soldering
+[PCB](../../assets/yumshare-pcb.png)
+
+The main PCB is located where the camera is. The back piece of the camera needs to be unscrewed to access the board. The connector is not soldered, and the PCB is coated. You need to scratch the coating off, or remove it with acetone.
+The main changes: "Backpiece" → "back piece" (two words), added a comma before "and" in the second sentence, "coat" → "coating" (more natural for a protective layer), and removed the unnecessary "you" in the last clause to avoid repetition.
+
+After the cable is soldered, Power on the Feeder and wait till you get asked for a password.
+
+Root-Password: `while(&P`
+
+### Change Boot Process 
+
+WIP Scripts 
+
+
 ## Actions (Buttons)
 
 These appear as **Button** entities in Home Assistant.

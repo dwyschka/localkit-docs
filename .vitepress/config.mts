@@ -5,7 +5,7 @@ export default defineConfig({
   srcDir: "markdown",
   
   title: "Localkit",
-  description: "Localkit Documentation",
+  description: "Documentation",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

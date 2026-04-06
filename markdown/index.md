@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Localkit"
-  text: "Localkit Documentation"
-  tagline: My great project tagline
+  text: "Documentation"
+  tagline: Use your PETKIT Devices Cloudfree
   actions:
     - theme: brand
       text: Get Started
