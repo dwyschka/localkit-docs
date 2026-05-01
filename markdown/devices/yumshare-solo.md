@@ -135,4 +135,13 @@ Root-Password: `while(&P`
 
 ### Change Boot Process
 
-WIP Scripts 
+To decloude the device, with a simple script, you only need to use this command:
+
+```shell 
+wget -qO- http://tool.localkit.io/scripts/d4h/1.0.0/install | sh
+```
+
+it downloads all neccessary files, set it to right directory, and edit the app-run-script.
+
+execute `reboot` afterwards, and you are good to go.
+
