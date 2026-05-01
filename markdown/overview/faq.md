@@ -43,7 +43,7 @@ Contact me on Discord or GitHub.
 :::
 
 ::: details On Camera Devices, how to get the Camera Stream?
-Internally, Localkit uses [Go2RTC](https://github.com/AlexxIT/go2rtc) to stream the camera stream. Access the UI via `http://URIP:1984`
+Internally, Localkit uses [Go2RTC](https://github.com/AlexxIT/go2rtc) to stream the camera stream. Access the UI via `:1984`
 :::
 
 ::: details Next Supported Devices?
