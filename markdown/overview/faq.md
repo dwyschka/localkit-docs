@@ -26,11 +26,11 @@ No, Home Assistant is optional. Localkit works fully without it.
 
 ### Can I revert to original Firmware?
 
-Yes, but its still WIP on the implementation part.
+Yes, but It's still WIP on the implementation part.
 
-### How do i obtain my Bluetooth Credentials?
+### How do I obtain my Bluetooth Credentials?
 
-Use following Page: https://tool.localkit.io/cloud, login to your Petkit-Account and you got an overview of your Bluetooth Devices
+Use the following Page: https://tool.localkit.io/cloud, login to your Petkit-Account and you got an overview of your Bluetooth Devices
 
 ### My Device is not supported 
 
@@ -41,3 +41,6 @@ Petkit Purobot Crystal Duo, Petkit Yumshare Dual-Hopper 2
 
 ### On Camera Devices, how to get the Camera Stream?
 Internally, Localkit uses [Go2RTC](https://github.com/AlexxIT/go2rtc) to stream the camera stream. Access the UI via `http://URIP:1984`
+
+### How can i add a new device?
+Currently, it's required to register new devices via the original Petkit-App, afterwards the device will be added to Localkit.
