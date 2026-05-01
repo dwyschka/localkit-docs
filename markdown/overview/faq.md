@@ -20,6 +20,10 @@ Yes, Localkit integrates with Home Assistant via MQTT. Devices are automatically
 No, Home Assistant is optional. Localkit works fully without it.
 :::
 
+::: details What is BYPASS_AUTH?
+`BYPASS_AUTH` automatically logs you in as a specific user, so you don't have to authenticate every time you open the Web UI. Set `BYPASS_AUTH=true` and `BYPASS_AUTH_ID` to the user ID you want to be automatically logged in as, should be 1
+:::
+
 ## Devices
 
 ::: details Why does the firmware need to be modified?
@@ -36,10 +40,6 @@ Currently, Bluetooth devices are read-only. sending commands is planned but stil
 
 ::: details How do I obtain my Bluetooth Credentials?
 Use the following page: https://tool.localkit.io/cloud, login to your Petkit account and you will get an overview of your Bluetooth devices.
-:::
-
-::: details What is BYPASS_AUTH?
-`BYPASS_AUTH` automatically logs you in as a specific user, so you don't have to authenticate every time you open the Web UI. Set `BYPASS_AUTH=true` and `BYPASS_AUTH_ID` to the user ID you want to be automatically logged in as, should be 1
 :::
 
 ::: details How can I add a new device?
