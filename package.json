@@ -28,6 +28,7 @@
     "is-what": "^5.5.0",
     "magic-string": "^0.30.21",
     "mark.js": "^8.11.1",
+    "markdown-it-footnote": "^4.0.0",
     "mdast-util-to-hast": "^13.2.1",
     "micromark-util-character": "^2.1.1",
     "micromark-util-encode": "^2.0.1",
