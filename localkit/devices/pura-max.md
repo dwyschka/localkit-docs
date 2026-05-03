@@ -1,6 +1,6 @@
 # Petkit Pura Max
 
-![Petkit Pura Max](../../assets/petkit-pura-max.webp)
+![Petkit Pura Max](../public/petkit-pura-max.webp)
 
 ::: info ESP32 Device
 The Pura Max runs on an ESP32 chip and supports firmware updates over the air (OTA).

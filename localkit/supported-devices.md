@@ -8,7 +8,7 @@ ESP32-based devices support firmware updates over the air (OTA). Ingenic/embedde
 
 ## Petkit Pura Max (ESP32)
 
-![Petkit Pura Max](../assets/petkit-pura-max.webp)
+![Petkit Pura Max](./public/petkit-pura-max.webp)
 
 Automatic self-cleaning litter box with odor control and K3 spray integration.
 
@@ -28,7 +28,7 @@ Supported:
 
 ## Petkit Fresh Element Solo (ESP32)
 
-![Petkit Fresh Element Solo](../assets/petkit-elements-solo.png)
+![Petkit Fresh Element Solo](./public/petkit-elements-solo.png)
 
 Automatic pet feeder with portion control and feeding schedules.
 
@@ -45,7 +45,7 @@ Supported:
 
 ## Petkit Yumshare Solo (Ingenic / Embedded Linux)
 
-![Petkit Yumshare Solo](../assets/yumshare-solo.png)
+![Petkit Yumshare Solo](./public/yumshare-solo.png)
 
 ::: warning
 No OTA support. To enable local control, you need to open the device and connect via serial.

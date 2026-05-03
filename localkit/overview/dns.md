@@ -1,24 +1,29 @@
 # DNS
 
-### Initial Settings
-On the initial installation of the device, the right URL needs to be blocked.
-e.g.:
-```
-b669d1gf8BT.iot-as-mqtt.eu-central-1.aliyuncs.com
-```
+### Overview
 
-Maybe the `eu-central-1` needs to be replaced with your initial region.
+Localkit intercepts the device's cloud communication by redirecting two domains to the local containers via DNS.
 
-After the changes and Localkit is started, we need to install the prepared firmware to our devices. This is usually possible via OTA.
+| Domain                | Redirects To | Container |
+|-----------------------|---|---|
+| `api.eu-pet.com`      | `10.10.46.105` | Localkit |
+| `api-eu.petkt.com` | `10.10.46.105` | Localkit |
+| `*.iot-as-mqtt.eu-central-1.aliyuncs.com` | `10.10.46.101` | Localkit Broker |
 
-### DNS Settings
-```
-api.eu-pet.com => 10.10.46.105
-*.iot-as-mqtt.eu-central-1.aliyuncs.com => 10.10.46.101
-```
+::: info
+The region `eu-central-1` may differ depending on your initial device region. Adjust accordingly.
+:::
 
-Every device on Localkit needs to have a subdomain. Enter your desired subdomain and add it to your local DNS.
+### Device Subdomain
 
-![dns-subdomain.png](../public/dns-subdomain.png)
+Every device in Localkit needs its own subdomain. Enter the desired subdomain in Localkit and add the corresponding DNS entry pointing to the Localkit Broker IP.
 
-`pura.iot-as-mqtt.eu-central-1.aliyuncs.com` needs to be rewritten to our IP from localkit-broker
+![dns-subdomain.png](../public/dns.png)
+
+For example: `localkit.iot-as-mqtt.eu-central-1.aliyuncs.com` → `10.10.46.101`
+
+### Initial Setup
+
+When setting up a device for the first time, the device's default cloud MQTT URL must be blocked in your DNS server before flashing the firmware. This forces the device to use the redirected domain from the start.
+
+After the DNS entries are in place and Localkit is running, install the prepared firmware on your devices — this is usually done via OTA update.

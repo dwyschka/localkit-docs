@@ -1,6 +1,6 @@
 # Petkit Fresh Element Solo
 
-![Petkit Fresh Element Solo](../../assets/petkit-elements-solo.png)
+![Petkit Fresh Element Solo](../public/petkit-elements-solo.png)
 
 ::: info ESP32 Device
 The Fresh Element Solo runs on an ESP32 chip and supports firmware updates over the air (OTA).

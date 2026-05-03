@@ -1,6 +1,6 @@
 # Petkit Yumshare Solo
 
-![Petkit Yumshare Solo](../../assets/yumshare-solo.png)
+![Petkit Yumshare Solo](../public/yumshare-solo.png)
 
 ::: warning Serial Access Required
 The Yumshare Solo runs on an Ingenic embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you need to open the device and gain access via serial connection.
@@ -125,7 +125,7 @@ To access the device:
 3. Use a terminal to establish a serial connection and gain shell access.
 
 ### Soldering
-![PCB.png](../../assets/yumshare-pcb.png)
+![PCB.png](../public/yumshare-pcb.png)
 
 The main PCB is located where the camera is. The back piece of the camera needs to be unscrewed to access the board. The connector is not soldered, and the PCB is coated. You need to scratch the coating off, or remove it with acetone.
 

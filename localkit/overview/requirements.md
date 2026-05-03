@@ -1,24 +1,23 @@
 # Requirements
 
 ### Software
-- Docker (https://www.docker.com/)
-- Docker Compose (https://docs.docker.com/compose/)
-- DNS Server ([AdGuard Home](https://adguard.com/de/adguard-home/overview.html) / [Pi-hole](https://pi-hole.net/))
-- Home Assistant* (https://www.home-assistant.io/)
-- Generic MQTT Broker*
+
+| Requirement | Link | Required |
+|---|---|---|
+| Docker | [docker.com](https://www.docker.com/) | Yes |
+| Docker Compose | [docs.docker.com/compose](https://docs.docker.com/compose/) | Yes |
+| DNS Server | [AdGuard Home](https://adguard.com/de/adguard-home/overview.html) / [Pi-hole](https://pi-hole.net/) | Yes |
+| Home Assistant | [home-assistant.io](https://www.home-assistant.io/) | Optional |
+| Generic MQTT Broker | | Optional |
 
 ### Hardware
-::: info :warning:Only for [YumShare Solo](../supported-devices/yumshare-solo.md) 
-:::
-- Soldering Iron
-- FTDI 
-- Terminal 
 
-::: info * Optional
+A soldering iron, FTDI adapter, and terminal are only required for devices that need a manipulated firmware (e.g. [YumShare Solo](/devices/yumshare-solo)).
+
+::: info
+For most devices, no additional hardware is needed beyond your network setup.
 :::
 
-### Why does my Device needs a manipulated Firmware? 
+### Why does my device need a manipulated firmware?
 
-Long Story Short: Its only allowed to enter the MQTT Server with SSL/TLS. And only connections with the right CA are allowed.
-
-
+Petkit only allows MQTT connections secured with SSL/TLS using their own Certificate Authority (CA). Since we cannot obtain a valid certificate signed by their CA, the firmware needs to be modified to  trust a custom CA — allowing Localkit to act as the MQTT broker.

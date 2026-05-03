@@ -1,15 +1,21 @@
-# Installation 
+# Installation
 
-### Docker
-We need to Deploy 2 Containers:
-- [Localkit](https://github.com/dwyschka/localkit) 
-- [Localkit-Broker](https://github.com/dwyschka/localkit-broker)
+### Overview
 
-We need 2 different IP-Addresses for the Containers, the following docker-compose.yml shows a macvlan config.
-The "eth0" network, is the macvlan network, u need to create this network before.
+Two containers need to be deployed:
 
+| Container | Image |
+|---|---|
+| [Localkit](https://github.com/dwyschka/localkit) | `ghcr.io/dwyschka/localkit:main` |
+| [Localkit Broker](https://github.com/dwyschka/localkit-broker) | `ghcr.io/dwyschka/localkit-broker:main` |
 
-### Pull Container
+Each container requires its own IP address. The example below uses a macvlan network configuration. Make sure to create the `eth0` macvlan network before starting the containers.
+
+::: info Why separate IPs?
+Since the devices connect on fixed, well-known ports (e.g. 443 for MQTT), port rewriting is not possible. Each container must be reachable on its own IP so that multiple hosts can be served without port conflicts.
+:::
+
+### Pull Images
 
 ```bash
 docker pull ghcr.io/dwyschka/localkit:main
@@ -18,12 +24,12 @@ docker pull ghcr.io/dwyschka/localkit-broker:main
 
 ### Docker Compose
 
-```docker-compose.yml
+```yaml
 services:
   localkit:
     container_name: localkit
     image: ghcr.io/dwyschka/localkit:main
-    cap_add: 
+    cap_add:
       - NET_BIND_SERVICE
     networks:
       localkit:
@@ -34,20 +40,20 @@ services:
         - localkit-logs:/var/www/html/storage/logs
         - localkit-database:/var/www/html/storage/database
     environment:
-        - APP_TIMEZONE=Europe/Berlin  
-        - DB_CONNECTION=sqlite  
-        - DB_DATABASE=/var/www/html/storage/database/localkit.sqlite  
-        - LOCALKIT_GO2RTC_ENABLE=true  
-        - PETKIT_LOCAL_IP=10.10.46.105  
-        - LOCALKIT_BROKER_HOST=localkit-broker  
-        - LOCALKIT_BROKER_PORT=443  
-        - HOMEASSISTANT_PORT=1883  
-        - HOMEASSISTANT_HOST=10.10.50.10  
-        - HOMEASSISTANT_CLIENT_ID=localkit  
+        - APP_TIMEZONE=Europe/Berlin
+        - DB_CONNECTION=sqlite
+        - DB_DATABASE=/var/www/html/storage/database/localkit.sqlite
+        - LOCALKIT_GO2RTC_ENABLE=true
+        - PETKIT_LOCAL_IP=10.10.46.105
+        - LOCALKIT_BROKER_HOST=localkit-broker
+        - LOCALKIT_BROKER_PORT=443
+        - HOMEASSISTANT_PORT=1883
+        - HOMEASSISTANT_HOST=10.10.50.10
+        - HOMEASSISTANT_CLIENT_ID=localkit
         - BYPASS_AUTH=true
         - BYPASS_AUTH_ID=1
     restart: always
-    
+
   localkit-broker:
     image: ghcr.io/dwyschka/localkit-broker:main
     container_name: localkit-broker
@@ -63,29 +69,29 @@ volumes:
   localkit-storage:
   localkit-database:
   localkit-logs:
-       
+
 networks:
   localkit:
   eth0:
     external: true
 ```
 
-### Create User
-We need to create a user for localkit.
+### Create a User
 
-#### Docker
-```bash
+After the containers are running, create an admin user:
+
+::: code-group
+```bash [Docker]
 docker exec -it localkit php artisan make:filament-user
 ```
-
-#### Docker Compose
-```bash
+```bash [Docker Compose]
 docker compose exec localkit php artisan make:filament-user
 ```
+:::
 
-Now visit the WebUI, you should be logged in automatically.
+Then visit the Web UI — you should be logged in automatically.
 
+### Verify Devices
 
-### Devices
-If everything is set up correctly, the devices should be visible in the WebUI.
-![devices.png](../public/devices.png)
+If everything is set up correctly, your devices will appear in the Web UI.
+

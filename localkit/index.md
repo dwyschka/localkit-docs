@@ -4,20 +4,20 @@ layout: home
 
 hero:
   name: "Localkit"
-  tagline: Cloudfree Petkit Devices
+  text: "Documentation"
+  tagline: Use your PETKIT Devices Cloudfree
   actions:
     - theme: brand
       text: Get Started
-      link: /overview/requirements    
+      link: /overview/requirements
     - theme: alt
       text: Supported Devices
       link: /supported-devices
 
 features:
   - title: Local Control
-    details: Control your Petkit devices without cloud
-  - title: Homeassistant Integration
-    details: Integrate your devices with Homeassistant
----
+    details: Communicate directly with your Petkit devices on your local network — no cloud, no external servers.
+  - title: Home Assistant Integration
+    details: Automatically discovered by Home Assistant via MQTT. All device states and controls appear as native entities.
 ---
 
