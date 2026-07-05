@@ -19,5 +19,10 @@ features:
     details: Communicate directly with your Petkit devices on your local network — no cloud, no external servers.
   - title: Home Assistant Integration
     details: Automatically discovered by Home Assistant via MQTT. All device states and controls appear as native entities.
+  - title: Cloudfree Camera access
+    details: Camera-stream access is completely locally, no cloud
+  - title: OTA Updates 
+    details: Declouding and updates through Ota are supported.
+
 ---
 

@@ -21,3 +21,6 @@ For most devices, no additional hardware is needed beyond your network setup.
 ### Why does my device need a manipulated firmware?
 
 Petkit only allows MQTT connections secured with SSL/TLS using their own Certificate Authority (CA). Since we cannot obtain a valid certificate signed by their CA, the firmware needs to be modified to  trust a custom CA — allowing Localkit to act as the MQTT broker.
+
+### Devices
+Devices marked with 🔨 are on beta-support. Please report any issues you encounter.
