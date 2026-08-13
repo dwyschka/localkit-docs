@@ -35,6 +35,7 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/supported-devices' },
           { text: 'Petkit Pura Max', link: '/devices/pura-max' },
+          { text: '🔨 Petkit Fresh Element 3', link: '/devices/fresh-element-3' },
           { text: 'Petkit Fresh Element Solo', link: '/devices/fresh-element-solo' },
           { text: 'Petkit Yumshare Solo', link: '/devices/yumshare-solo' },
         ]

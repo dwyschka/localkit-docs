@@ -87,7 +87,7 @@ These appear as **Number** entities in Home Assistant under the `config` categor
 ## How to Flash Modified Firmware
 
 1. Open the device detail page in the Localkit Web UI.
-2. Enable **OTA** in the device settings.
+2. Start Action **Check OTA**.
 3. Reboot the device — Localkit will automatically serve the modified firmware and the device will install it.
 
 The firmware is loaded directly from Localkit, no manual file transfer is needed.

@@ -1,12 +1,16 @@
-# Petkit Fresh Element Solo
+# 🔨 Petkit Fresh Element 3
 
-![Petkit Fresh Element Solo](../public/petkit-elements-solo.png)
+![Petkit Fresh Element 3](../public/fresh-element-3.png)
 
 ::: info ESP32 Device
 The Fresh Element Solo runs on an ESP32 chip and supports firmware updates over the air (OTA).
 :::
 
-The Petkit Fresh Element Solo is an automatic pet feeder. Localkit exposes its full feature set as Home Assistant entities via MQTT and supports scheduled feeding.
+::: warning BETA
+The Integration of this device is currently in BETA, please report any issues you encounter on Github
+:::
+
+The Petkit Fresh Element 3 is an automatic pet feeder. Localkit exposes its full feature set as Home Assistant entities via MQTT and supports scheduled feeding.
 
 ## Supported Features
 
@@ -14,10 +18,8 @@ The Petkit Fresh Element Solo is an automatic pet feeder. Localkit exposes its f
 - ✅ Feeding schedules
 - ✅ Food level warning
 - ✅ Desiccant tracking
-- ✅ Indicator light control
 - ✅ Child lock
 - ✅ Feed sound prompt
-- ✅ Bluetooth Proxy
 
 ## Actions (Buttons)
 
