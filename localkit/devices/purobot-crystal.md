@@ -1,7 +1,7 @@
 # Petkit Purobot Crystal
 
-::: warning Serial Access Required
-The Purobot Crystal (T7) runs on an Ingenic embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you need to open the device and gain access via serial connection — the same procedure as for the [Yumshare Solo](./yumshare-solo#how-to-access).
+::: warning No OTA Support
+The Purobot Crystal (T7) runs on an Ingenic embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you can access the device over telnet — no soldering or opening the device required (see [How to Access](#how-to-access)).
 :::
 
 The Petkit Purobot Crystal is a self-cleaning litter box for **crystal litter** with a built-in camera, a deodorizing spray unit, and health monitoring features. Localkit exposes its full feature set as Home Assistant entities via MQTT.
@@ -127,4 +127,23 @@ These appear as **Select** entities in Home Assistant under the `config` categor
 
 ## How to Access
 
-See [How to Access — Yumshare Solo](./yumshare-solo#how-to-access) for the serial access procedure. The Purobot Crystal uses the same Ingenic platform and requires the same physical serial connection to decloud the device.
+::: info No soldering required
+The Purobot Crystal does **not** support OTA firmware updates, but it is accessible over telnet — no need to open the device or solder a serial connection.
+:::
+
+To access the device:
+
+1. Connect to the device via telnet: `telnet <device-ip>`
+2. Log in with user `root` and password `while(&P`.
+
+### Change Boot Process
+
+To decloude the device, with a simple script, you only need to use this command:
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/t7/1.0.0/install | sh
+```
+
+it downloads all neccessary files, set it to right directory, and edit the app-run-script.
+
+execute `reboot` afterwards, and you are good to go.

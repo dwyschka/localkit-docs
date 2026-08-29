@@ -115,7 +115,7 @@ Supported:
 ## Petkit Purobot Crystal (Ingenic / Embedded Linux)
 
 ::: warning
-No OTA support. To enable local control, you need to open the device and connect via serial.
+No OTA support. To enable local control, access the device over telnet — no soldering or opening the device required.
 :::
 
 Self-cleaning litter box for crystal litter with a built-in camera, deodorizing spray unit, and health monitoring features (urine pH detection, occult blood detection).
@@ -138,7 +138,7 @@ Supported:
 ## Petkit Eversweet Ultra (Ingenic / Embedded Linux)
 
 ::: warning
-No OTA support. To enable local control, you need to open the device and connect via serial.
+No OTA support. To enable local control, access the device over telnet — no soldering or opening the device required.
 :::
 
 Smart water fountain with a built-in camera, automatic water change (drain & refill), heater, clean and waste water tanks, and a replaceable filter cube.
