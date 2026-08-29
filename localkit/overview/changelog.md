@@ -1,5 +1,32 @@
 # Changelog
 
+## 1.1.0 — Unreleased (beta)
+
+### Devices
+
+- **Petkit Eversweet Ultra** — smart water fountain with camera, heater, automatic water change, and cube consumable tracking
+- **Petkit Purobot Crystal** — self-cleaning crystal litter box with camera, deodorizing spray, and health monitoring
+- **Petkit Yumshare Dual** — dual-hopper camera feeder with per-hopper feeding amounts and calibration factors
+- **Petkit W5** — now fully controllable over BLE (power, mode, filter reset) and exposes all state values to Home Assistant
+- Any WiFi device can now act as a **Bluetooth proxy** for BLE devices (previously Pura Max only)
+
+### Features
+
+- Full Home Assistant entity platform with **event entities**: every activity (eat, drink, detect, cleaning, error) fires an event in Home Assistant
+- **Pet recognition (discern)**: pet photos are served to camera devices for identification; recognized pet names appear on activities and as "Last Used By"
+- **Activity log**: per-device and per-pet activity timelines with attached camera recordings, plus dashboard widgets (Recent Activity, Pet Event Counts per day)
+- **Object storage emulation** (S3/Garage): devices upload event images and videos locally; media is decrypted in place and `.ts` recordings are automatically converted to browser-playable MP4
+- Camera thumbnails (go2rtc still frames) on the device cards and a live stream in the device edit view
+- New **Media** page to browse, download, and delete uploaded media, and a new **Logs** page to view, download, clear, and delete log files
+- Redesigned Web UI: top-bar navigation, card-based Devices & Pets pages, device actions on the cards, per-device debug mode, and a "Reset Config" action
+- Feeding schedules are now stored in dedicated database tables and pushed reliably to the device (extensive wire-format fixes, per-hopper amounts `a1`/`a2` for the Yumshare Dual)
+- Daily automatic cleanup of old activity entries and media, with configurable retention (`LOCALKIT_ACTIVITY_RETENTION_DAYS`, `LOCALKIT_MEDIA_RETENTION_DAYS`)
+- Docker: bundled Garage S3 storage service in `docker-compose.yml`
+
+### Technical
+
+- Upgraded to Laravel 13 and Filament 5
+
 ## 1.0.0 — April 6, 2026
 
 Initial release of Localkit.

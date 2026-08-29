@@ -21,7 +21,9 @@ features:
     details: Automatically discovered by Home Assistant via MQTT. All device states and controls appear as native entities.
   - title: Cloudfree Camera access
     details: Camera-stream access is completely locally, no cloud
-  - title: OTA Updates 
+  - title: Activity & Media
+    details: Pet recognition, activity timelines and local media storage — recordings never leave your network.
+  - title: OTA Updates
     details: Declouding and updates through Ota are supported.
 
 ---

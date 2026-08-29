@@ -3,7 +3,7 @@
 ![Petkit Fresh Element 3](../public/fresh-element-3.png)
 
 ::: info ESP32 Device
-The Fresh Element Solo runs on an ESP32 chip and supports firmware updates over the air (OTA).
+The Fresh Element 3 runs on an ESP32 chip and supports firmware updates over the air (OTA).
 :::
 
 ::: warning BETA
