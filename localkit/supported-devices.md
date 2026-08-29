@@ -65,10 +65,10 @@ Supported:
 
 ---
 
-## Petkit Yumshare Dual (Ingenic / Embedded Linux)
+## Petkit Yumshare Dual Gen2 (Axera / Embedded Linux)
 
 ::: warning
-No OTA support. To enable local control, you need to open the device and connect via serial.
+No OTA support. To enable local control, access the device over telnet — no soldering or opening the device required.
 :::
 
 Automatic dual-hopper pet feeder with a built-in camera, microphone, and AI-based pet and eating detection. Each feeding can mix food from both hoppers independently.

@@ -40,7 +40,7 @@ export default defineConfig({
           { text: 'Petkit Pura Max', link: '/devices/pura-max' },
           { text: '🔨 Petkit Fresh Element 3', link: '/devices/fresh-element-3' },
           { text: 'Petkit Fresh Element Solo', link: '/devices/fresh-element-solo' },
-          { text: '🔨 Petkit Yumshare Dual', link: '/devices/yumshare-dual' },
+          { text: 'Petkit Yumshare Dual', link: '/devices/yumshare-dual' },
           { text: 'Petkit Yumshare Solo', link: '/devices/yumshare-solo' },
           { text: 'Petkit Purobot Crystal', link: '/devices/purobot-crystal' },
           { text: 'Petkit Eversweet Ultra', link: '/devices/eversweet-ultra' },

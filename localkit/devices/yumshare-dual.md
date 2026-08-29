@@ -1,7 +1,7 @@
 # Petkit Yumshare Dual
 
-::: warning Serial Access Required
-The Yumshare Dual runs on an Ingenic embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you need to open the device and gain access via serial connection — the same procedure as for the [Yumshare Solo](./yumshare-solo#how-to-access).
+::: warning No OTA Support
+The Yumshare Dual **Gen2** (D4H2) runs on an Axera embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you can access the device over telnet — no soldering or opening the device required (see [How to Access](#how-to-access)).
 :::
 
 The Petkit Yumshare Dual is an automatic pet feeder with **two food hoppers** and a built-in camera. Each feeding — manual or scheduled — can mix food from both hoppers independently. In addition to scheduled feeding, it provides live video streaming, motion detection, pet recognition, and eating detection. Localkit exposes all these features as Home Assistant entities via MQTT.
@@ -97,4 +97,23 @@ A feeding triggered by the device's own schedule reports only a `feed_over` even
 
 ## How to Access
 
-See [How to Access — Yumshare Solo](./yumshare-solo#how-to-access) for the serial access procedure. The Yumshare Dual uses the same Ingenic platform and requires the same physical serial connection to decloud the device.
+::: info No soldering required
+The Yumshare Dual Gen2 does **not** support OTA firmware updates, but it is accessible over telnet — no need to open the device or solder a serial connection.
+:::
+
+To access the device:
+
+1. Connect to the device via telnet: `telnet <device-ip>`
+2. Log in with user `root` and password `while(&P`.
+
+### Change Boot Process
+
+To decloude the device, with a simple script, you only need to use this command:
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/d4h2/1.0.0/install | sh
+```
+
+it downloads all neccessary files, set it to right directory, and edit the app-run-script.
+
+execute `reboot` afterwards, and you are good to go.
