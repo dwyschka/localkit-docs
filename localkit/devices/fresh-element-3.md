@@ -20,6 +20,7 @@ The Petkit Fresh Element 3 is an automatic pet feeder. Localkit exposes its full
 - ✅ Desiccant tracking
 - ✅ Child lock
 - ✅ Feed sound prompt
+- ✅ Bluetooth Proxy
 
 ## Actions (Buttons)
 

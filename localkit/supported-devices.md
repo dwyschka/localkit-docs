@@ -3,7 +3,7 @@
 Currently, a growing set of Petkit devices is supported. Each device requires a separate implementation.
 
 ::: info
-ESP32-based devices support firmware updates over the air (OTA). Ingenic/embedded Linux devices require physical serial access to install modified firmware.
+ESP32-based devices support firmware updates over the air (OTA). Embedded Linux devices (Ingenic/Axera) do not support OTA — they are declouded over telnet (Yumshare Dual Gen2, Purobot Crystal, Eversweet Ultra) or via serial access (Yumshare Solo).
 :::
 
 ## Petkit Pura Max (ESP32)
@@ -21,6 +21,7 @@ Supported:
 - ✅ Do-not-disturb scheduling
 - ✅ Kitten protection mode
 - ✅ Error reporting
+- ✅ Bluetooth Proxy
 
 [Full documentation →](./devices/pura-max)
 
@@ -38,6 +39,7 @@ Supported:
 - ✅ Food level warning
 - ✅ Desiccant tracking
 - ✅ Feed sound, indicator light, and child lock
+- ✅ Bluetooth Proxy
 
 [Full documentation →](./devices/fresh-element-solo)
 
@@ -60,6 +62,7 @@ Supported:
 - ✅ Desiccant tracking
 - ✅ Child lock
 - ✅ Feed sound prompt
+- ✅ Bluetooth Proxy
 
 [Full documentation →](./devices/fresh-element-3)
 
@@ -107,6 +110,7 @@ Supported:
 - ✅ Adjustable detection sensitivity
 - ✅ Volume control
 - ✅ Desiccant tracking
+- ✅ Bluetooth Proxy
 
 [Full documentation →](./devices/yumshare-solo)
 
