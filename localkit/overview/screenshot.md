@@ -2,7 +2,7 @@
 
 ## Devices
 ![Overview](../public/localkit-devices-overview-page.png)
-![Edit](../public/localkit-devices-overview-page.png)
+![Edit](../public/localkit-devices-edit-page.png)
 
 ## Bluetooth Devices
 ![Overview](../public/localkit-bt-devices-overview-page.png)
