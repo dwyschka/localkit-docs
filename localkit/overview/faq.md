@@ -8,6 +8,12 @@ Yes, after the initial setup your devices communicate entirely on your local net
 Localkit redirects Petkit's cloud domains to local IPs. This requires a DNS server like AdGuard Home or Pi-hole that supports custom DNS entries.
 :::
 
+::: details Why should I not use a wildcard redirect for aliyuncs.com?
+Do **not** redirect the whole `aliyuncs.com` domain (e.g. `aliyuncs.com` or `*.aliyuncs.com`). Only the device-specific MQTT subdomain `*.iot-as-mqtt.eu-central-1.aliyuncs.com` may point to the Localkit Broker — see [DNS](./dns).
+
+`aliyuncs.com` is Aliyun's shared cloud domain. A domain-wide wildcard redirect also captures unrelated Aliyun endpoints used by your devices and other clients on your network, and routes them to the Localkit Broker, which cannot answer them. This can break device connectivity and unrelated services, and is hard to debug because the failures appear to come from the device, not the DNS setup.
+:::
+
 ::: details Why does each container need its own IP address?
 Devices connect on fixed, well-known ports (e.g. 443 for MQTT). Since port rewriting is not possible, each container must be reachable on a dedicated IP to avoid conflicts.
 :::
@@ -30,12 +36,12 @@ No, Home Assistant is optional. Localkit works fully without it.
 Petkit secures MQTT connections using their own Certificate Authority (CA). Since a valid certificate signed by their CA cannot be obtained, the firmware must be patched to trust a custom CA — allowing Localkit to act as the MQTT broker.
 :::
 
-::: details Can I revert to original Firmware?
-Yes, but it's still WIP on the implementation part.
+::: details Can I revert to the original firmware?
+Not yet — reverting to the original stock firmware is currently not implemented, but it is planned.
 :::
 
 ::: details Are Bluetooth devices read-only?
-Currently, Bluetooth devices are read-only. sending commands is planned but still WIP.
+The K3 is read-only — it is triggered by its linked Pura Max. The W5 supports commands (power, mode, filter reset) via any proxy-capable device.
 :::
 
 ::: details How do I obtain my Bluetooth Credentials?

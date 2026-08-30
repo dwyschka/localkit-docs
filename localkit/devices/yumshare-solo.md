@@ -109,7 +109,7 @@ These appear as **Number** entities in Home Assistant under the `config` categor
 
 ## Feeding Schedules
 
-The feeder supports time-based feeding schedules. Each schedule entry defines a time of day and a portion amount. Schedules are stored as a JSON array and processed by Localkit to trigger feed actions at the configured times.
+The feeder supports time-based feeding schedules. Each schedule entry defines a time of day and a portion amount. Schedules are stored in dedicated schedule tables and processed by Localkit to trigger feed actions at the configured times.
 
 
 ## How to Access
