@@ -3,7 +3,7 @@
 ![Petkit Fresh Element 3](../public/fresh-element-3.png)
 
 ::: info ESP32 Device
-The Fresh Element Solo runs on an ESP32 chip and supports firmware updates over the air (OTA).
+The Fresh Element 3 runs on an ESP32 chip and supports firmware updates over the air (OTA).
 :::
 
 ::: warning BETA
@@ -20,6 +20,7 @@ The Petkit Fresh Element 3 is an automatic pet feeder. Localkit exposes its full
 - ✅ Desiccant tracking
 - ✅ Child lock
 - ✅ Feed sound prompt
+- ✅ Bluetooth Proxy
 
 ## Actions (Buttons)
 
@@ -84,4 +85,4 @@ Reverting to the original stock firmware is currently not implemented.
 
 ## Feeding Schedules
 
-The feeder supports time-based feeding schedules. Each schedule entry defines a time of day and a portion amount. Schedules are stored as a JSON array and processed by Localkit to trigger feed actions at the configured times.
+The feeder supports time-based feeding schedules. Each schedule entry defines a time of day and a portion amount. Schedules are stored in dedicated schedule tables and processed by Localkit to trigger feed actions at the configured times.

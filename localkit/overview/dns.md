@@ -29,9 +29,9 @@ When setting up a device for the first time, the device's default cloud MQTT URL
 After the DNS entries are in place and Localkit is running, install the prepared firmware on your devices — this is usually done via OTA update.
 
 ### OTA 
-That OTA works, you need to add the following DNS entries to your DNS server:
+For OTA to work, you need to add the following DNS entries to your DNS server:
 | Domain                | Redirects To | Container |
 |-----------------------|---|---|
-| `noresolv-localkit-io.iot-as-mqtt.eu-central-1.aliyuncs.com`      | `127.0.0.1` | Localkit |
+| `noresolv-localkit-io.iot-as-mqtt.eu-central-1.aliyuncs.com`      | `127.0.0.1` | — (loopback, no container) |
 
-When Ota is enabled, the connection to MQTT is resolved to localhost, so the HTTP-Fallback is used.
+When OTA is enabled, the connection to MQTT is resolved to localhost, so the HTTP-Fallback is used.

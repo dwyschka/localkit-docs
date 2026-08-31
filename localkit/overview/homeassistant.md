@@ -29,6 +29,47 @@ If your Devices are not connected to Home Assistant, ensure the `localkit-homeas
 
 ![localkit-services.png](../public/localkit-services.png)
 
+## Entity Types
+
+Localkit publishes devices via MQTT autodiscovery using a broad set of Home Assistant entity types — switches, sensors, binary sensors, buttons, numbers, selects, images, and **event** entities, among others. Each device's documentation lists the exact entities it exposes.
+
+All settable entities (switches, numbers, selects) write their values straight back to the device, so changes made in Home Assistant take effect immediately.
+
+## Activity Events
+
+Every device activity — feeding, drinking, pet detection, cleaning cycles, errors — is published to Home Assistant as an **Event** entity (named `Activity`). Each device gets one event entity that fires for the following event types:
+
+| Event type | Meaning |
+|------------|---------|
+| `eat_start` / `eat_over` | A pet started / finished eating at a feeder |
+| `drink_start` / `drink_over` | A pet started / finished drinking at a fountain |
+| `detect` | A pet was detected by a camera |
+| `in_use_start` / `in_use_over` | A pet entered / left a litter box |
+| `cleaning` | A litter box cleaning cycle started |
+| `maintenance` | A maintenance cycle ran |
+| `error_start` / `error_over` | A device error started / cleared |
+
+Use an event entity as an automation trigger and branch on the `event_type` attribute:
+
+```yaml
+automation:
+  - alias: "Cat ate"
+    trigger:
+      - trigger: state
+        entity_id: event.cat_feeder_activity
+    condition:
+      - condition: template
+        value_template: "{{ trigger.to_state.attributes.event_type == 'eat_over' }}"
+    action:
+      - action: notify.mobile_app_phone
+        data:
+          message: "The cat has finished eating."
+```
+
+::: tip
+Activities are also recorded in Localkit's [Activity Log](./activity-log), with pet names resolved via pet recognition and camera recordings attached.
+:::
+
 ## Camera Streams
 
 Localkit camera streams can be viewed in a Home Assistant dashboard and exposed as a virtual **Media Player** for audio or TTS playback on devices that support camera two-way audio.
