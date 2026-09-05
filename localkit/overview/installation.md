@@ -117,7 +117,11 @@ The Garage container needs a minimal `./s3/garage.toml` next to your `docker-com
 metadata_dir = "/var/lib/garage/meta"
 data_dir = "/var/lib/garage/data"
 db_engine = "lmdb"
-replication_mode = "none"
+replication_factor = 1
+
+# If deployed on raspberry pi you might need this
+# lmdb_map_size = "1G"
+
 rpc_bind_addr = "[::]:3901"
 rpc_public_addr = "127.0.0.1:3901"
 rpc_secret = "<same value as GARAGE_RPC_SECRET>"
