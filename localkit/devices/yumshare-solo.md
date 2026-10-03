@@ -153,7 +153,7 @@ The main PCB is located behind the camera. The back piece of the camera needs to
 
 Once the cable is soldered, power on the feeder and wait until you are prompted for a password.
 
-### How to connect
+## How to connect
 
 Once telnet is enabled, connect to the device over telnet:
 
