@@ -87,7 +87,7 @@ Supported:
 - ✅ Pet recognition (discern)
 - ✅ Bluetooth Proxy
 
-[Full documentation →](./devices/yumshare-dual)
+[Full documentation →](./devices/yumshare-dual2)
 
 ---
 

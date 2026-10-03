@@ -6,6 +6,22 @@ The Eversweet Ultra (W7H) runs on an Ingenic embedded Linux platform and does **
 
 The Petkit Eversweet Ultra is a smart water fountain with a built-in camera, automatic water change (drain & refill), a heater, separate clean and waste water tanks, and a replaceable filter **cube**. Localkit exposes its full feature set as Home Assistant entities via MQTT.
 
+## Installation
+
+Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to Access](#how-to-access)):
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/w7h/2.0.0/install | sh
+```
+
+To remove Localkit again:
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/w7h/1.0.0/uninstall | sh
+```
+
+The script downloads all necessary files, places them in the correct directory, and patches the app-run script. Reboot the device afterwards to activate the changes.
+
 ## Supported Features
 
 - ✅ Fountain flow modes (off, continuous, interval, sensor)
@@ -150,15 +166,3 @@ To access the device:
 
 1. Connect to the device via telnet: `telnet <device-ip>`
 2. Log in with user `root` and password `while(&P`.
-
-### Change Boot Process
-
-To decloude the device, with a simple script, you only need to use this command:
-
-```shell
-wget -qO- http://tool.localkit.io/scripts/w7h/1.0.0/install | sh
-```
-
-it downloads all neccessary files, set it to right directory, and edit the app-run-script.
-
-execute `reboot` afterwards, and you are good to go.

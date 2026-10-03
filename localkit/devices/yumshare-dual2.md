@@ -1,10 +1,26 @@
-# Petkit Yumshare Dual
+# Petkit Yumshare Dual (Gen 2)
 
 ::: warning No OTA Support
 The Yumshare Dual **Gen2** (D4H2) runs on an Axera embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you can access the device over telnet — no soldering or opening the device required (see [How to Access](#how-to-access)).
 :::
 
 The Petkit Yumshare Dual is an automatic pet feeder with **two food hoppers** and a built-in camera. Each feeding — manual or scheduled — can mix food from both hoppers independently. In addition to scheduled feeding, it provides live video streaming, motion detection, pet recognition, and eating detection. Localkit exposes all these features as Home Assistant entities via MQTT.
+
+## Installation
+
+Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to Access](#how-to-access)):
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/d4sh2/2.0.0/install | sh
+```
+
+To remove Localkit again:
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/d4sh2/1.0.0/uninstall | sh
+```
+
+The script downloads all necessary files, places them in the correct directory, and patches the app-run script. Reboot the device afterwards to activate the changes.
 
 ## Supported Features
 
@@ -105,15 +121,3 @@ To access the device:
 
 1. Connect to the device via telnet: `telnet <device-ip>`
 2. Log in with user `root` and password `while(&P`.
-
-### Change Boot Process
-
-To decloude the device, with a simple script, you only need to use this command:
-
-```shell
-wget -qO- http://tool.localkit.io/scripts/d4h2/1.0.0/install | sh
-```
-
-it downloads all neccessary files, set it to right directory, and edit the app-run-script.
-
-execute `reboot` afterwards, and you are good to go.
