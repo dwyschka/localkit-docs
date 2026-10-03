@@ -90,7 +90,7 @@ Example:
 ```yaml
 streams:
   cat_feeder:
-    - rtsp://10.0.0.190:8554/cam?backchannel=1
+    - rtsp://10.0.0.190:8554/stream0#backchannel=1
     - ffmpeg:cat_feeder#audio=opus
 ```
 

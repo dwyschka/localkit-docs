@@ -2,10 +2,6 @@
 
 ![Petkit Yumshare Solo](../public/yumshare-solo.png)
 
-::: warning Serial Access Required
-The Yumshare Solo (Gen 1) runs on an Ingenic embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you must open the device and gain shell access over a serial connection — telnet access only becomes available once the install script has run (see [Physical Access](#physical-access)).
-:::
-
 The Petkit Yumshare Solo is an automatic pet feeder with a built-in camera. In addition to scheduled feeding, it provides live video streaming, motion detection, pet detection, and eating detection. Localkit exposes all these features as Home Assistant entities via MQTT.
 
 ## Installation
