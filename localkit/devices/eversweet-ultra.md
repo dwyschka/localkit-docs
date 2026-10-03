@@ -1,9 +1,5 @@
 # Petkit Eversweet Ultra
 
-::: warning No OTA Support
-The Eversweet Ultra (W7H) runs on an Ingenic embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you can access the device over telnet — no soldering or opening the device required (see [How to Access](#how-to-access)).
-:::
-
 The Petkit Eversweet Ultra is a smart water fountain with a built-in camera, automatic water change (drain & refill), a heater, separate clean and waste water tanks, and a replaceable filter **cube**. Localkit exposes its full feature set as Home Assistant entities via MQTT.
 
 ## Installation
@@ -157,10 +153,6 @@ These appear as **Select** entities in Home Assistant under the `config` categor
 The camera detects pets and drinking behavior. Each detection is published as a Home Assistant **Event** entity (see [Activity Events](../overview/homeassistant#activity-events)) and recorded in the [Activity Log](../overview/activity-log), including the recognized pet's name. The `drink_start`/`drink_over` events share one activity entry and record the drinking duration.
 
 ## How to Access
-
-::: info No soldering required
-The Eversweet Ultra does **not** support OTA firmware updates, but it is accessible over telnet — no need to open the device or solder a serial connection.
-:::
 
 To access the device:
 
