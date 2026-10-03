@@ -4,7 +4,7 @@ The Petkit Eversweet Ultra is a smart water fountain with a built-in camera, aut
 
 ## Installation
 
-Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to Access](#how-to-access)):
+Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to connect](#how-to-connect)):
 
 ```shell
 wget -qO- http://tool.localkit.io/scripts/w7h/2.0.0/install | sh
@@ -152,7 +152,7 @@ These appear as **Select** entities in Home Assistant under the `config` categor
 
 The camera detects pets and drinking behavior. Each detection is published as a Home Assistant **Event** entity (see [Activity Events](../overview/homeassistant#activity-events)) and recorded in the [Activity Log](../overview/activity-log), including the recognized pet's name. The `drink_start`/`drink_over` events share one activity entry and record the drinking duration.
 
-## How to Access
+## How to connect
 
 To access the device:
 

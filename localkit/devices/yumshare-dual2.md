@@ -4,7 +4,7 @@ The Petkit Yumshare Dual is an automatic pet feeder with **two food hoppers** an
 
 ## Installation
 
-Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to Access](#how-to-access)):
+Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to connect](#how-to-connect)):
 
 ```shell
 wget -qO- http://tool.localkit.io/scripts/d4sh2/2.0.0/install | sh
@@ -107,7 +107,7 @@ The feeder supports time-based feeding schedules. Each schedule entry defines a 
 
 A feeding triggered by the device's own schedule reports only a `feed_over` event — Localkit records the activity from that event, including the dispensed amounts.
 
-## How to Access
+## How to connect
 
 To access the device:
 

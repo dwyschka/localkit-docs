@@ -1,9 +1,5 @@
 # Petkit Purobot Crystal
 
-::: warning No OTA Support
-The Purobot Crystal (T7) runs on an Ingenic embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you can access the device over telnet — no soldering or opening the device required (see [How to Access](#how-to-access)).
-:::
-
 The Petkit Purobot Crystal is a self-cleaning litter box for **crystal litter** with a built-in camera, a deodorizing spray unit, and health monitoring features. Localkit exposes its full feature set as Home Assistant entities via MQTT.
 
 ::: info No speaker
@@ -12,7 +8,7 @@ The device has no speaker — voice and volume settings exist in the firmware bu
 
 ## Installation
 
-Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to Access](#how-to-access)):
+Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to connect](#how-to-connect)):
 
 ```shell
 wget -qO- http://tool.localkit.io/scripts/t7/2.0.0/install | sh
@@ -141,7 +137,7 @@ These appear as **Select** entities in Home Assistant under the `config` categor
 | Time Interval Of Each Cleaning | `auto_interval_min` | 0, 30, 60, 300, 600, 900, 1800, 3600 | — | How often a cleaning cycle runs |
 | Delayed Cleaning | `still_time` | 0, 30, 60, 300, 600, 900, 1800, 3600 | 1200 | Wait time after a visit before cleaning starts |
 
-## How to Access
+## How to connect
 
 To access the device:
 

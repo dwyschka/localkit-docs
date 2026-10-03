@@ -55,7 +55,3 @@ Currently, it's required to register new devices via the original Petkit app. Af
 ::: details My device is not supported
 Contact me on Discord or GitHub.
 :::
-
-::: details On Camera Devices, how to get the Camera Stream?
-Internally, Localkit uses [Go2RTC](https://github.com/AlexxIT/go2rtc) to stream the camera stream. Access the UI via `:1984`
-:::

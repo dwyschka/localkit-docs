@@ -18,7 +18,7 @@ To remove Localkit again:
 wget -qO- http://tool.localkit.io/scripts/d4h/1.0.0/uninstall | sh
 ```
 
-Once the script has finished, the feeder restarts and telnet is enabled. You can then log in with the credentials listed under [Credentials](#credentials).
+Once the script has finished, the feeder restarts and telnet is enabled. You can then log in with the credentials listed under [How to connect](#how-to-connect).
 
 ## Supported Features
 
@@ -153,6 +153,9 @@ The main PCB is located behind the camera. The back piece of the camera needs to
 
 Once the cable is soldered, power on the feeder and wait until you are prompted for a password.
 
-### Credentials
+### How to connect
 
-Log in with user `root` and password `while(&P`.
+Once telnet is enabled, connect to the device over telnet:
+
+1. Connect to the device via telnet: `telnet <device-ip>`
+2. Log in with user `root` and password `while(&P`.
