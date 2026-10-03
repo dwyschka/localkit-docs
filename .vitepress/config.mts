@@ -26,6 +26,7 @@ export default defineConfig({
           { text: 'FAQ', link: '/overview/faq' },
           { text: 'Screenshot', link: '/overview/screenshot' },
           { text: 'Changelog', link: '/overview/changelog' },
+          { text: 'Credits', link: '/overview/credits' },
         ]
       },
       {
