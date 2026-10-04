@@ -1,10 +1,22 @@
-# Petkit Yumshare Dual
-
-::: warning No OTA Support
-The Yumshare Dual **Gen2** (D4H2) runs on an Axera embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you can access the device over telnet — no soldering or opening the device required (see [How to Access](#how-to-access)).
-:::
+# Petkit Yumshare Dual (Gen 2)
 
 The Petkit Yumshare Dual is an automatic pet feeder with **two food hoppers** and a built-in camera. Each feeding — manual or scheduled — can mix food from both hoppers independently. In addition to scheduled feeding, it provides live video streaming, motion detection, pet recognition, and eating detection. Localkit exposes all these features as Home Assistant entities via MQTT.
+
+## Installation
+
+Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to connect](#how-to-connect)):
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/d4sh2/2.0.0/install | sh
+```
+
+To remove Localkit again:
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/d4sh2/1.0.0/uninstall | sh
+```
+
+The script downloads all necessary files, places them in the correct directory, and patches the app-run script. Reboot the device afterwards to activate the changes.
 
 ## Supported Features
 
@@ -95,25 +107,9 @@ The feeder supports time-based feeding schedules. Each schedule entry defines a 
 
 A feeding triggered by the device's own schedule reports only a `feed_over` event — Localkit records the activity from that event, including the dispensed amounts.
 
-## How to Access
-
-::: info No soldering required
-The Yumshare Dual Gen2 does **not** support OTA firmware updates, but it is accessible over telnet — no need to open the device or solder a serial connection.
-:::
+## How to connect
 
 To access the device:
 
 1. Connect to the device via telnet: `telnet <device-ip>`
 2. Log in with user `root` and password `while(&P`.
-
-### Change Boot Process
-
-To decloude the device, with a simple script, you only need to use this command:
-
-```shell
-wget -qO- http://tool.localkit.io/scripts/d4h2/1.0.0/install | sh
-```
-
-it downloads all neccessary files, set it to right directory, and edit the app-run-script.
-
-execute `reboot` afterwards, and you are good to go.

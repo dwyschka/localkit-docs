@@ -10,7 +10,7 @@ Devices are shown as a **card grid** (without pagination), which refreshes every
 - The working-state badge and error badge (if any)
 - An MQTT-connected indicator and any linked Bluetooth device
 - An OTA-available icon when a firmware update is pending
-- For camera devices: a live **camera tile** — a cached still frame grabbed from the device's go2rtc stream
+- For camera devices: a live **camera tile** — a cached still frame grabbed from the device's rtsp stream
 
 Every device action (**Start Feeding**, **Start Cleaning**, **Take Snapshot**, **Deep Clean**, **Reboot**, …) is available directly on the card, and the **Activities** button opens the device's [activity timeline](./activity-log).
 

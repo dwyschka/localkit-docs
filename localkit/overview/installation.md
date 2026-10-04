@@ -45,7 +45,6 @@ services:
         - APP_TIMEZONE=Europe/Berlin
         - DB_CONNECTION=sqlite
         - DB_DATABASE=/var/www/html/storage/database/localkit.sqlite
-        - LOCALKIT_GO2RTC_ENABLE=true
         - PETKIT_LOCAL_IP=10.10.46.105
         - LOCALKIT_BROKER_HOST=localkit-broker
         - LOCALKIT_BROKER_PORT=443

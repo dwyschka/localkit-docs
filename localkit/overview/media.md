@@ -79,7 +79,7 @@ If remuxing fails, the original `.ts` is kept and can be retried later.
 
 ## Camera Thumbnails
 
-Camera devices each run their own go2rtc server. Localkit grabs a still frame from go2rtc, converts it with ffmpeg, and shows it as a **camera tile** on the device cards in the Web UI. Thumbnails are cached briefly (`GO2RTC_THUMBNAIL_TTL`, default 10 s) so the device list stays fast. The live stream is available in the device's edit view under Media.
+Camera devices each run their own rtsp server. Localkit grabs a still frame, converts it with ffmpeg, and shows it as a **camera tile** on the device cards in the Web UI. Thumbnails are cached briefly (`CAMERA_THUMBNAIL_TTL`, default 10 s) so the device list stays fast. The live stream is available in the device's edit view under Media.
 
 ## Media Page
 

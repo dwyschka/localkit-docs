@@ -1,10 +1,22 @@
 # Petkit Eversweet Ultra
 
-::: warning No OTA Support
-The Eversweet Ultra (W7H) runs on an Ingenic embedded Linux platform and does **not** support OTA firmware updates. To enable local control, you can access the device over telnet — no soldering or opening the device required (see [How to Access](#how-to-access)).
-:::
-
 The Petkit Eversweet Ultra is a smart water fountain with a built-in camera, automatic water change (drain & refill), a heater, separate clean and waste water tanks, and a replaceable filter **cube**. Localkit exposes its full feature set as Home Assistant entities via MQTT.
+
+## Installation
+
+Localkit is installed through the **Provisioning** entry in the Web UI navigation. Once provisioning has succeeded, you are asked for a script — run the install script from the device shell over telnet (see [How to connect](#how-to-connect)):
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/w7h/2.0.0/install | sh
+```
+
+To remove Localkit again:
+
+```shell
+wget -qO- http://tool.localkit.io/scripts/w7h/1.0.0/uninstall | sh
+```
+
+The script downloads all necessary files, places them in the correct directory, and patches the app-run script. Reboot the device afterwards to activate the changes.
 
 ## Supported Features
 
@@ -140,25 +152,9 @@ These appear as **Select** entities in Home Assistant under the `config` categor
 
 The camera detects pets and drinking behavior. Each detection is published as a Home Assistant **Event** entity (see [Activity Events](../overview/homeassistant#activity-events)) and recorded in the [Activity Log](../overview/activity-log), including the recognized pet's name. The `drink_start`/`drink_over` events share one activity entry and record the drinking duration.
 
-## How to Access
-
-::: info No soldering required
-The Eversweet Ultra does **not** support OTA firmware updates, but it is accessible over telnet — no need to open the device or solder a serial connection.
-:::
+## How to connect
 
 To access the device:
 
 1. Connect to the device via telnet: `telnet <device-ip>`
 2. Log in with user `root` and password `while(&P`.
-
-### Change Boot Process
-
-To decloude the device, with a simple script, you only need to use this command:
-
-```shell
-wget -qO- http://tool.localkit.io/scripts/w7h/1.0.0/install | sh
-```
-
-it downloads all neccessary files, set it to right directory, and edit the app-run-script.
-
-execute `reboot` afterwards, and you are good to go.

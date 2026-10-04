@@ -26,6 +26,7 @@ export default defineConfig({
           { text: 'FAQ', link: '/overview/faq' },
           { text: 'Screenshot', link: '/overview/screenshot' },
           { text: 'Changelog', link: '/overview/changelog' },
+          { text: 'Credits', link: '/overview/credits' },
         ]
       },
       {
@@ -41,8 +42,8 @@ export default defineConfig({
           { text: 'Petkit Pura Max', link: '/devices/pura-max' },
           { text: '🔨 Petkit Fresh Element 3', link: '/devices/fresh-element-3' },
           { text: 'Petkit Fresh Element Solo', link: '/devices/fresh-element-solo' },
-          { text: 'Petkit Yumshare Dual', link: '/devices/yumshare-dual' },
-          { text: 'Petkit Yumshare Solo', link: '/devices/yumshare-solo' },
+          { text: 'Petkit Yumshare Dual (Gen 2)', link: '/devices/yumshare-dual2' },
+          { text: 'Petkit Yumshare Solo (Gen 1)', link: '/devices/yumshare-solo' },
           { text: 'Petkit Purobot Crystal', link: '/devices/purobot-crystal' },
           { text: 'Petkit Eversweet Ultra', link: '/devices/eversweet-ultra' },
         ]
